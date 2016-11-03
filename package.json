@@ -25,6 +25,8 @@
     "@ionic/storage": "1.1.6",
     "ionic-angular": "2.0.0-rc.3",
     "ionic-native": "2.2.3",
+    "accounts-base-client-side": "^0.1.1",
+    "accounts-phone": "0.0.1",
     "angular2-moment": "^1.0.0-beta.6",
     "ionicons": "3.0.0",
     "moment": "^2.15.2",
