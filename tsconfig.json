@@ -5,12 +5,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "dom",
-      "es2015"
+      "es6",
+      "dom"
     ],
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "stripInternal": true,
     "target": "es5"
   },
   "include": [
