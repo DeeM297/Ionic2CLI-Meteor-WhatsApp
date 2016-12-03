@@ -1,0 +1,15 @@
+Tutorial Step 3 Realtime Meteor Server
+In api folder
+meteor npm install --save meteor-node-stubs zone.js meteor-rxjs meteor-typings babel-runtime
+  => +-- UNMET PEER DEPENDENCY rxjs@^5.0.0-beta.12
+    => meteor npm install --save rxjs@5.0.0-beta.12
+
+In root project
+npm install --save meteor-rxjs
+  => +-- UNMET PEER DEPENDENCY babel-runtime@^6.18.0
+    => npm install --save babel-runtime@6.18.0
+
+Note: 
+In src/pages/chats/chats.ts
+The first line from Step 2 is deleted??? 
+  => import * as moment from 'moment';
