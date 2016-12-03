@@ -13,3 +13,9 @@ Note:
 In src/pages/chats/chats.ts
 The first line from Step 2 is deleted??? 
   => import * as moment from 'moment';
+
+Tutorial Step 4 Messages Page
+Ionic serve 
+  => typescript: ...onic2CLI-Meteor-WhatsApp/node_modules/meteor-rxjs/dist/ObservableCollection.d.ts, line: 1
+     Cannot find type definition file for 'chai'.
+    => npm install --save-dev @types/chai

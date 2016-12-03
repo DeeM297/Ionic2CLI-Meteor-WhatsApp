@@ -12,6 +12,7 @@ declare module 'api/models/whatsapp-models' {
     chatId?: string;
     content?: string;
     createdAt?: Date;
+    ownership?: string;
   }
 
 }
