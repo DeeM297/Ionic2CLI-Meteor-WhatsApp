@@ -2,8 +2,23 @@ import 'meteor-client-side';
 
 import { platformBrowser } from '@angular/platform-browser';
 import { enableProdMode } from '@angular/core';
-
 import { AppModuleNgFactory } from './app.module.ngfactory';
 
-enableProdMode();
-platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+import { MeteorObservable } from 'meteor-rxjs';
+
+declare let Meteor;
+
+Meteor.startup(() => {
+
+  const sub = MeteorObservable.autorun().subscribe(() => {
+    if (Meteor.loggingIn()) return;
+ 
+    setTimeout(() => {
+        sub.unsubscribe();
+    });
+
+    enableProdMode();
+    platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+  });
+
+});

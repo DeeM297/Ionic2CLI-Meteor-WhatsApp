@@ -14,8 +14,28 @@ In src/pages/chats/chats.ts
 The first line from Step 2 is deleted??? 
   => import * as moment from 'moment';
 
+===============================================================================================
+
 Tutorial Step 4 Messages Page
 Ionic serve 
   => typescript: ...onic2CLI-Meteor-WhatsApp/node_modules/meteor-rxjs/dist/ObservableCollection.d.ts, line: 1
      Cannot find type definition file for 'chai'.
     => npm install --save-dev @types/chai
+
+===============================================================================================
+
+Tutorial Step 5 Authentication
+npm install accounts-phone --save
+  => +-- accounts-phone@0.0.1
+  => `-- UNMET PEER DEPENDENCY meteor-client-side@1.3.5
+    => npm install --save meteor-client-side@1.3.5
+      => npm WARN accounts-phone@0.0.1 requires a peer of meteor-client-side@~0.2.3 but none was installed.
+        => npm install --save meteor-client-side@~0.2.3
+
+In file api/server/methods.ts
+  => import { Profile } from "api/models/whatsapp-models";
+    => Cannot find module
+
+With ionic serve, error
+  => TypeError: Package['accounts-base'] is undefined
+  => GET XHR http://localhost:8100/sockjs/info [HTTP/1.1 404 Not Found 1ms]
